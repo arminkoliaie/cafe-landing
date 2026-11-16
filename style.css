@@ -21,6 +21,7 @@ body {
   background-color: var(--color-dark);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 .btn {
   display: inline-block;
@@ -44,7 +45,7 @@ body {
   color: var(--color-white);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./img/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg");
+    url("./img/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -57,6 +58,10 @@ body {
   background-color: var(--color-white);
   padding: 20px;
   border-radius: 12px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .site-footer {
   background-color: var(--color-dark);
@@ -68,25 +73,27 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
-a{
+a {
   color: var(--color-white);
   text-decoration: none;
-  gap: 12px;
+}
+a:hover {
+  color: var(--color-accent);
 }
 section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 60px 20px;
 }
-nav{
+nav {
   display: flex;
-  justify-items: center;
+  gap: 24px;
 }
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .menu-list {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
 @media (min-width: 1024px) {
   .menu-list {
     grid-template-columns: repeat(3, 1fr);
