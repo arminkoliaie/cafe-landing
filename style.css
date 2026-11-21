@@ -4,6 +4,9 @@
   --color-accent: #c8813a;
   --color-white: #ffffff;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: "Vazirmatn", Tahoma, sans-serif;
@@ -33,6 +36,7 @@ body {
 }
 .btn:hover {
   background-color: #a96a2c;
+  color: var(--color-white);
 }
 .hero {
   min-height: 70vh;
@@ -62,6 +66,11 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  position: relative;
+}
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.15);
 }
 .site-footer {
   background-color: var(--color-dark);
@@ -72,6 +81,39 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+}
+.price {
+  margin-top: 16px;
+  display: block;
+}
+.badge-new {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  left: 12px;
+  top: 12px;
+  z-index: 1;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  z-index: 50;
+}
+.back-to-top:hover {
+  background-color: #a96a2c;
+  color: var(--color-white);
 }
 a {
   color: var(--color-white);
@@ -89,11 +131,7 @@ nav {
   display: flex;
   gap: 24px;
 }
-/* @media (min-width: 640px) {
-  .menu-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
+
 @media (min-width: 1024px) {
   .menu-list {
     grid-template-columns: repeat(3, 1fr);
